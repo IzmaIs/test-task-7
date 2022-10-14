@@ -1,5 +1,5 @@
 export type RequestState<data> = {
-    loaded: boolean;
+    loaded?: boolean;
     items?: Array<data>;
 }
 

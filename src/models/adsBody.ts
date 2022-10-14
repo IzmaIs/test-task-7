@@ -1,7 +1,7 @@
 export type AdsBody =
     {
         date: number;
-        id: string;
+        id?: string;
         locality: string;
         oldPrice: string;
         price: string;

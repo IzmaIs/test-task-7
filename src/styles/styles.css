@@ -1,5 +1,20 @@
 .main {
   height: 100vh;
+  font-family: "Ubuntu", serif;
+}
+
+.ads-page {
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.all-ads {
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .card {
@@ -7,9 +22,179 @@
   height: 368px;
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
   border-radius: 8px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1019607843);
 }
 .card-image {
   height: 260px;
+  position: relative;
+}
+.card-image-alert__viewed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 24px;
+  width: 94px;
+  background: rgba(44, 44, 44, 0.74);
+  border-radius: 8px;
+  font-size: 12px;
+  color: white;
+  top: 12px;
+  left: 30%;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+.card-image .svg-items {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 40px;
+  height: 64px;
+  right: 16px;
+  justify-content: space-between;
+}
+.card-image .svg-items svg {
+  fill: white;
+}
+.card-image .svg-items svg:hover {
+  fill: #00A0AB;
+  cursor: pointer;
+}
+.card-footer {
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-footer-first-item {
+  align-items: center;
+  display: flex;
+  padding: 0 0.5em;
+  justify-content: space-between;
+}
+.card-footer-first-item__old-price {
+  font-weight: 400;
+  font-size: 14px;
+}
+.card-footer-second-item {
+  padding: 0 0.5em;
+  color: #2C2C2C;
+  display: flex;
+  flex-direction: column;
+}
+.card-footer-second-item__new-price {
+  font-size: 22px;
+  font-weight: 700;
+}
+.card-footer-second-item__product-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.card-footer-third-item {
+  color: #8F8F8F;
+  padding: 0 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-footer-third-item__city {
+  font-size: 12px;
+}
+.card-footer-third-item__time {
+  font-size: 12px;
+}
+.card-footer__viewed {
+  background-color: #FFF6A5;
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.svg-viewed path {
+  fill: #00A0AB;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #8F8F8F;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #8F8F8F transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.card-btn {
+  padding: 1em 1em 1em 0;
+}
+.card-btn button {
+  border: none;
+  background: white;
+  cursor: pointer;
+  color: #00A0AB;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.card-btn button:after {
+  content: url("/public/imgs/icons/strelochka.svg");
+}
+
+.alert {
+  height: 50px;
+  width: 300px;
+  background: #5AD85A;
+  border-radius: 25px;
+  position: fixed;
+  top: 35px;
+  left: 36%;
+}
+
+.alert-message {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
